@@ -38,11 +38,13 @@ If we can encrypt a single char in $O(1)$ time using `ciphertext[i] = map[plaint
 
 Its construction is not intuitive, not to me at least for now, and I have spent quite some time with a white board trying to figure this out. Luckily, I got it right in the code on the first try, Alhamdulillah.
 
-`int pam[94];
+```
+int pam[94];
 for (int i = 0; i < 94; i++)
 {
   pam[i] = indexOf(map, 94, i + 33) + 33;
-}`
+}
+```
 
 It does not even look intuitive. For example, the following are the map and the corresponding pam arrays from one of my runs (that had the srand() commented out):
 
