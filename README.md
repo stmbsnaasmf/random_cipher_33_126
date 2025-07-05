@@ -7,7 +7,7 @@ ASCII-33 to ASCII-126 are all readabily printable characters.
 
 ### Encryption 
 
-Encryption is easy and intuitive. We create a map (or key) array of 94 chars, populate it with ASCII-33 to ASCII-126, then shuffle it. Then encryption is simple:
+Encryption is easy and intuitive. We create a map (or key) array of 94 chars, populate it with ASCII-33 to ASCII-126, then shuffle it. The encryption is simple:
 
 `ciphertext[i] = map[plaintext[i] - 33];`
 
