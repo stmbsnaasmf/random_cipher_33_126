@@ -18,7 +18,7 @@ As we can see, encryption of a single char is an $O(1)$ operation., or $O(m)$ fo
 Decryption is a little complicated. There are two ways to decrypt:
 
 1. Using the same map that was used for encryption
-2. Using an inverse map
+2. Using the inverse map
 
 #### Using the Same Map
 
