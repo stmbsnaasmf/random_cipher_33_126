@@ -24,30 +24,27 @@ Decryption is a little complicated. There are two ways to decrypt:
 
 `plaintext[i] = indexOf(map, 94, ciphertext[i]) + 33;`
 
-This requires us first find the index of the ciphertext letter in the map array, which is an $O(n)$ operation for a single character, or $O(n x m)$ for a char array of length $m$. Here, $n$ is the length of the map array. As we can see, it is extremely inefficient.
+This requires us to first find the index of the ciphertext char in the map array, which is an $O(n)$ operation for a single character, or $O(n x m)$ for a char array of length $m$. Here, $n$ is the length of the map array. As we can see, it is extremely inefficient.
 
 If we can encrypt a single char in $O(1)$ time using `ciphertext[i] = map[plaintext[i] - 33];`, we should also be able to decrypt in $O(1)$ time as well, right? That brings us to the next section.
 
 #### Using the Inverse Map
 
-"Inverse" may not be the right term here, but the point stands. I have decided to call this array "pam" in my code. Not very creative, I know. It lets us decrypt a single char in $O(1)$ time, and it lets us decrypt using the **encrypt function**.
+"Inverse" may not be the right term here, but I do not know what the correct term would be. I have decided to call this array "pam" in my code. Not very creative, I know. It lets us decrypt a single char in $O(1)$ time, and it lets us decrypt using the **encrypt function**.
 
-`
-randomCipherEncrypt(map, plaintext, ciphertext);  //Encryption
-randomCipherEncrypt(pam, ciphertext, plaintext);  //Decryption
-`
+`randomCipherEncrypt(map, plaintext, ciphertext);  //Encryption`
+
+`randomCipherEncrypt(pam, ciphertext, plaintext);  //Decryption`
 
 Its construction is not intuitive, not to me at least for now, and I have spent quite some time with a white board trying to figure this out. Luckily, I got it right in the code on the first try, Alhamdulillah.
 
-`
-int pam[94];
+`int pam[94];
 for (int i = 0; i < 94; i++)
 {
   pam[i] = indexOf(map, 94, i + 33) + 33;
-}
-`
+}`
 
-It does not even look intuitive. For example, the following are the map and the corresponding pam arrays from one of my run (that had the srand() commented out):
+It does not even look intuitive. For example, the following are the map and the corresponding pam arrays from one of my runs (that had the srand() commented out):
 
 `map: J L E w x ; + ? o 9 b H `` " | 6 r % B X C Q \ e @ i ^ z - . g t & j > 5 [ ( $ V ' ) M N 0 l # < Y 1 y } 8 = ] P n S { 4 s * v / I u c _ a 7 W O 2 Z d ~ m T : G p h F f D q k K 3 U R A , !`
 
