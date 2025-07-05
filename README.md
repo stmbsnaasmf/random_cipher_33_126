@@ -48,8 +48,8 @@ for (int i = 0; i < 94; i++)
 
 It does not even look intuitive. For example, the following are the map and the corresponding pam arrays from one of my runs (that had the srand() commented out):
 
-`map: J L E w x ; + ? o 9 b H \`` " | 6 r % B X C Q \ e @ i ^ z - . g t & j > 5 [ ( $ V ' ) M N 0 l # < Y 1 y } 8 = ] P n S { 4 s * v / I u c _ a 7 W O 2 Z d ~ m T : G p h F f D q k K 3 U R A , !`
+```map: J L E w x ; + ? o 9 b H ` " | 6 r % B X C Q \ e @ i ^ z - . g t & j > 5 [ ( $ V ' ) M N 0 l # < Y 1 y } 8 = ] P n S { 4 s * v / I u c _ a 7 W O 2 Z d ~ m T : G p h F f D q k K 3 U R A , !```
 
-`pam: ~ . O G 2 A I F J ^ ' } = > \`` M R i y \ D 0 f U * o & P V C ( 9 | 3 5 u # s p , a ! x " K L h X 6 { Z n z H g 4 Q j E 7 W ; d - e + c k 8 t ? r : B w N m Y ) q v 1 ] @ b _ $ % S < [ / T l`
+```pam: ~ . O G 2 A I F J ^ ' } = > ` M R i y \ D 0 f U * o & P V C ( 9 | 3 5 u # s p , a ! x " K L h X 6 { Z n z H g 4 Q j E 7 W ; d - e + c k 8 t ? r : B w N m Y ) q v 1 ] @ b _ $ % S < [ / T l```
 
 The construction of this "pam" array is an $O(n^2)$ operation where n is the size of the arrays, but that is a one time cost.
