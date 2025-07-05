@@ -98,12 +98,6 @@ void randomCipherEncrypt(int* map, char* plaintext, char* ciphertext)
 
 void randomCipherDecrypt(int* map, char* plaintext, char* ciphertext)
 {
-    int pam[94];
-    for (int i = 0; i < 94; i++)
-    {
-        pam[i] = i + 33;
-    }
-
     for (int i = 0; i < strlen(ciphertext); i++)
     {
         char p = indexOf(map, 94, ciphertext[i]);
