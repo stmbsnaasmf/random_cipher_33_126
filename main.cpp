@@ -170,7 +170,7 @@ int main(int argc, char** argv)
 
 void fisherYatesShuffling(int *arr, int n)
 {
-//Copy pasted with thnaks from https://www.sanfoundry.com/cpp-program-implement-fisher-yates-algorithm-array-shuffling/
+//Copy pasted with thanks from https://www.sanfoundry.com/cpp-program-implement-fisher-yates-algorithm-array-shuffling/
     int a[n];
     int ind[n];
     for (int i = 0; i < n; i++)
