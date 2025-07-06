@@ -1,4 +1,5 @@
 # random_cipher_33_126
+
 ROT13, ROT_N and random cipher, all operating on 94 chars from ASCII-33 to ASCII-126.
 
 ASCII-33 to ASCII-126 are all readabily printable characters.
@@ -11,7 +12,7 @@ Encryption is easy and intuitive. We create a map (or key) array of 94 chars, po
 
 `ciphertext[i] = map[plaintext[i] - 33];`
 
-As we can see, encryption of a single char is an $O(1)$ operation., or $O(m)$ for a char array of length $m$.
+As we can see, encryption of a single char is an $O(1)$ operation., or $O(m)$ for an array of length $m$.
 
 ### Decryption
 
@@ -24,7 +25,7 @@ Decryption is a little complicated. There are two ways to decrypt:
 
 `plaintext[i] = indexOf(map, 94, ciphertext[i]) + 33;`
 
-This requires us to first find the index of the ciphertext char in the map array, which is an $O(n)$ operation for a single character, or $O(n \times m)$ for a char array of length $m$. Here, $n$ is the length of the map array. As we can see, it is extremely inefficient.
+This requires us to first find the index of the ciphertext char in the map array, which is an $O(n)$ operation for a single char, or $O(n \times m)$ for an array of length $m$. Here, $n$ is the length of the map array. As we can see, it is extremely inefficient.
 
 If we can encrypt a single char in $O(1)$ time using `ciphertext[i] = map[plaintext[i] - 33];`, we should also be able to decrypt in $O(1)$ time as well, right?
 
