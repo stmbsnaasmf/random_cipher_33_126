@@ -26,7 +26,7 @@ Decryption is a little complicated. There are two ways to decrypt:
 
 This requires us to first find the index of the ciphertext char in the map array, which is an $O(n)$ operation for a single character, or $O(n \times m)$ for a char array of length $m$. Here, $n$ is the length of the map array. As we can see, it is extremely inefficient.
 
-If we can encrypt a single char in $O(1)$ time using `ciphertext[i] = map[plaintext[i] - 33];`, we should also be able to decrypt in $O(1)$ time as well, right? That brings us to the next section.
+If we can encrypt a single char in $O(1)$ time using `ciphertext[i] = map[plaintext[i] - 33];`, we should also be able to decrypt in $O(1)$ time as well, right?
 
 #### Using the Inverse Map
 
@@ -46,7 +46,7 @@ for (int i = 0; i < 94; i++)
 }
 ```
 
-It does not even look intuitive. For example, the following are the map and the corresponding pam arrays from one of my runs (that had the srand() commented out):
+It does not even look intuitive. For example, the following are the map and the corresponding pam arrays from one of my runs (that had `srand()` commented out):
 
 ```map: J L E w x ; + ? o 9 b H ` " | 6 r % B X C Q \ e @ i ^ z - . g t & j > 5 [ ( $ V ' ) M N 0 l # < Y 1 y } 8 = ] P n S { 4 s * v / I u c _ a 7 W O 2 Z d ~ m T : G p h F f D q k K 3 U R A , !```
 
